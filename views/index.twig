@@ -66,7 +66,7 @@
 
 					msg.onend = function(e) {
 						isSpeaking = false;
-					  console.log('Finished in ' + event.elapsedTime + ' seconds.');
+					  console.log('Finished in ' + e.elapsedTime + ' seconds.');
 					};
 					if( !isSpeaking ) {
 						speechSynthesis.speak(msg);
@@ -111,7 +111,7 @@
 							msg.lang = 'en-US';
 							msg.onend = function(e) {
 								isSpeaking = false;
-							  console.log('Finished in ' + event.elapsedTime + ' seconds.');
+							  console.log('Finished in ' + e.elapsedTime + ' seconds.');
 								if( wordgroups.length > 0 ) {
 									sayNextWordGroup();
 								}
